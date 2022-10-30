@@ -1,0 +1,134 @@
+@use '../util' as u;
+
+.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card {
+  text-align: center;
+  width: 90%;
+  max-width: u.rem(342);
+  margin: u.rem(28) 0 u.rem(28) 0;
+  background-color: u.$white;
+  border-radius: u.rem(10);
+  overflow: hidden;
+
+  @include u.breakpoint-up(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: u.rem(600);
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    &--mobile {
+      @include u.breakpoint-up(desktop) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include u.breakpoint-up(desktop) {
+        display: block;
+      }
+    }
+  }
+
+  &__info {
+    padding: u.rem(22);
+    text-align: left;
+
+    @include u.breakpoint-up(desktop) {
+      padding: u.rem(30);
+    }
+  }
+
+  &__product {
+    font-size: u.rem(12);
+    color: u.$dark-grayish-blue;
+    font-weight: 500;
+    letter-spacing: u.rem(6);
+    margin-bottom: u.rem(15);
+
+    @include u.breakpoint-up(desktop) {
+      margin-bottom: u.rem(22);
+    }
+  }
+
+  &__name {
+    width: 90%;
+    font-family: u.$fraunces;
+    font-size: u.rem(30);
+    line-height: 1;
+    color: u.$very-dark-blue;
+    margin-bottom: u.rem(18);
+
+    @include u.breakpoint-up(desktop) {
+      font-size: u.rem(34);
+    }
+  }
+
+  &__description {
+    color: u.$dark-grayish-blue;
+    line-height: 1.6;
+    margin-bottom: u.rem(20);
+  }
+
+  &__price-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: u.rem(14);
+
+    @include u.breakpoint-up(desktop) {
+      margin-bottom: u.rem(26);
+    }
+  }
+
+  &__price-discount {
+    font-family: u.$fraunces;
+    font-size: u.rem(32);
+    color: u.$dark-cyan;
+    padding-right: u.rem(16);
+  }
+
+  &__price-normal {
+    font-size: u.rem(12);
+    color: u.$dark-grayish-blue;
+    text-decoration: line-through;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: u.$dark-cyan;
+    padding: u.rem(16) 0;
+    border-radius: u.rem(8);
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background-color: #1A4031;
+      transition: 100ms ease-in-out;
+    }
+
+    &:active {
+      background-color: #162921;
+      transition: 0s;
+    }
+
+    p {
+      color: u.$white;
+      padding-left: u.rem(10);
+    }
+  }
+}
