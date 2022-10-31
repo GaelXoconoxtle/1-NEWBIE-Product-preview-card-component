@@ -16,3 +16,12 @@ body {
   font-size: u.rem(14);
   background-color: u.$cream;
 }
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

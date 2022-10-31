@@ -23,18 +23,20 @@
 <body>
   <main class="main">
     <div class="product-card">
-      <img class="product-card__img product-card__img--mobile" src="/images/image-product-mobile.jpg" alt="Gabrielle Essence Eau De Parfum image product">
-      <img class="product-card__img product-card__img--desktop" src="/images/image-product-desktop.jpg" alt="Gabrielle Essence Eau De Parfum image product">
+      <picture>
+        <source media="(min-width: 90rem)" srcset="/images/image-product-desktop.jpg">
+        <img class="product-card__img product-card__img--mobile" src="/images/image-product-mobile.jpg" alt="Image of a perfume called Gabrielle Essence Eau De Parfum">
+      </picture>
       
       <div class="product-card__info">
 
-        <h2 class="product-card__product">PERFUME</h2>
+        <p class="product-card__product">PERFUME</>
         <h1 class="product-card__name">Gabrielle Essence Eau De Parfum</h1>
         <p class="product-card__description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
           Perfumer-Creator for the House of CHANEL.</p>
         <div class="product-card__price-container">
           <p class="product-card__price-discount">$149.99</p>
-          <p class="product-card__price-normal">$169.99</p>
+          <del class="product-card__price-normal"><span class="sr-only">Previous price</span>$169.99</del>
         </div>
         <div class="product-card__button">
           <img src="/images/icon-cart.svg" alt="cart icon">
@@ -46,9 +48,11 @@
     </div>
   </main>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/GaelXoconoxtle">Gael Xoconoxtle</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/GaelXoconoxtle">Gael Xoconoxtle</a>.
+    </div>
+  </footer>
 </body>
 </html>

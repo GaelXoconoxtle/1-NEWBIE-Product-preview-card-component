@@ -27,20 +27,6 @@
     max-width: 100%;
     height: auto;
     display: block;
-
-    &--mobile {
-      @include u.breakpoint-up(desktop) {
-        display: none;
-      }
-    }
-
-    &--desktop {
-      display: none;
-
-      @include u.breakpoint-up(desktop) {
-        display: block;
-      }
-    }
   }
 
   &__info {
@@ -103,7 +89,6 @@
   &__price-normal {
     font-size: u.rem(12);
     color: u.$dark-grayish-blue;
-    text-decoration: line-through;
   }
 
   &__button {
